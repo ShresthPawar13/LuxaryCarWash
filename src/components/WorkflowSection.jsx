@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Sparkles, MessageSquareCheck, ShieldCheck } from "lucide-react";
 import { WORKFLOW_STEPS } from "../data/servicesData";
 
-export default function WorkflowSection({ onOpenBooking }) {
+export default function WorkflowSection() {
   const reasons = [
     {
       icon: MapPin,
@@ -16,8 +16,8 @@ export default function WorkflowSection({ onOpenBooking }) {
     },
     {
       icon: MessageSquareCheck,
-      title: "Easy slot booking",
-      desc: "Pick your package, share your address & preferred time, and relax.",
+      title: "Easy WhatsApp booking",
+      desc: "Pick your services in the cart, share your Google Maps pin & slot on WhatsApp.",
     },
     {
       icon: ShieldCheck,
@@ -41,7 +41,6 @@ export default function WorkflowSection({ onOpenBooking }) {
           </p>
         </div>
 
-        {/* 3 Photo-Backed Step Cards */}
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {WORKFLOW_STEPS.map((item, idx) => (
             <motion.div
@@ -72,7 +71,6 @@ export default function WorkflowSection({ onOpenBooking }) {
           ))}
         </div>
 
-        {/* Why Choose DSP Section like WasherBuddy */}
         <div className="mt-20 rounded-[28px] border border-sky-100 bg-sky-50/60 p-8 sm:p-12">
           <div className="text-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-sky-700">
@@ -104,15 +102,6 @@ export default function WorkflowSection({ onOpenBooking }) {
                 </div>
               );
             })}
-          </div>
-
-          <div className="mt-10 text-center">
-            <button
-              onClick={() => onOpenBooking()}
-              className="cursor-pointer rounded-full bg-[#0b2d6b] px-8 py-3.5 text-sm font-bold text-white shadow-md transition hover:bg-sky-700"
-            >
-              Book Your Doorstep Slot Now
-            </button>
           </div>
         </div>
       </div>

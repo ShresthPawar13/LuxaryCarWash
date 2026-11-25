@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Check, ArrowUpRight, ArrowDown, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { Check, ArrowDown, ShieldCheck, Sparkles, Star, MessageCircle } from "lucide-react";
 import { HERO_MEDIA } from "../data/servicesData";
+import { buildWhatsAppBookingUrl } from "../utils/whatsapp";
 
-export default function Hero({ onOpenBooking }) {
+export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/50 to-[#f8fafc] pt-10 pb-16 sm:pt-16 sm:pb-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
-        {/* Left WasherBuddy-style Clean Typography */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,23 +29,25 @@ export default function Hero({ onOpenBooking }) {
 
           <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
             Professional doorstep washing &amp; cabin sanitization brought directly
-            to your parking spot. Save time, skip the queue, and enjoy a
-            cleaner, healthier ride without driving to a wash centre.
+            to your parking spot. Pick your package &amp; add-ons below and send your
+            booking directly on WhatsApp in one click.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
-            <button
-              onClick={() => onOpenBooking()}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#0b2d6b] px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-blue-950/15 transition hover:-translate-y-0.5 hover:bg-sky-700"
+            <a
+              href={buildWhatsAppBookingUrl()}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-900/15 transition hover:-translate-y-0.5 hover:bg-emerald-700"
             >
-              Book Doorstep Wash
-              <ArrowUpRight className="h-4 w-4" />
-            </button>
+              <MessageCircle className="h-4 w-4" />
+              Book on WhatsApp ↗
+            </a>
             <a
               href="#packages"
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-2xs transition hover:border-[#0b2d6b] hover:text-[#0b2d6b]"
             >
-              Explore Packages
+              Build Your Wash Plan
               <ArrowDown className="h-4 w-4" />
             </a>
           </div>
@@ -58,12 +60,11 @@ export default function Hero({ onOpenBooking }) {
               <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Simple ₹ pricing
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Easy booking
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> 1-Tap WhatsApp Slot
             </span>
           </div>
         </motion.div>
 
-        {/* Right Realistic Multi-Photo Collage with Floating Badges */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -78,7 +79,6 @@ export default function Hero({ onOpenBooking }) {
             />
           </div>
 
-          {/* Floating Bottom-Left Card */}
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -93,7 +93,6 @@ export default function Hero({ onOpenBooking }) {
             </div>
           </motion.div>
 
-          {/* Floating Top-Right Rating Pill */}
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}

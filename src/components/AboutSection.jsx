@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Target, Compass, CheckCircle2, MapPin, ExternalLink } from "lucide-react";
+import { Target, Compass, CheckCircle2, MapPin, ExternalLink, Clock, Navigation } from "lucide-react";
 import DspLogo from "./DspLogo";
 import { SERVICE_AREAS } from "../data/servicesData";
 
-export default function AboutSection({ onOpenBooking }) {
+export default function AboutSection({ onOpenCart }) {
   const objectives = [
     "Deliver reliable, showroom-grade bike and car washing right at your doorstep.",
     "Maintain strict cabin hygiene and vehicle sanitization standards for healthier commutes.",
@@ -100,52 +100,67 @@ export default function AboutSection({ onOpenBooking }) {
           </div>
         </div>
 
-        {/* Location & Doorstep Service Areas Card like WasherBuddy */}
+        {/* Interactive Google Maps Location & Slot Card */}
         <div
           id="location"
-          className="mt-14 rounded-[28px] border border-slate-200 bg-white p-8 shadow-xs sm:p-10"
+          className="mt-14 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm"
         >
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-widest text-sky-700">
-                Find us on the map
-              </span>
-              <h3 className="mt-1 text-2xl font-extrabold text-slate-900">
-                DSP Doorstep Service Areas
-              </h3>
-              <p className="mt-1 text-sm text-slate-600">
-                We bring our mobile washing &amp; sanitization setup directly to societies and offices across Pune &amp; PCMC.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://maps.google.com/?q=Pune,Maharashtra"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-800 hover:border-[#0b2d6b] hover:text-[#0b2d6b]"
-              >
-                <MapPin className="h-4 w-4 text-[#0b2d6b]" />
-                Open in Google Maps
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              <button
-                onClick={() => onOpenBooking()}
-                className="cursor-pointer rounded-full bg-[#0b2d6b] px-5 py-2.5 text-xs font-bold text-white hover:bg-sky-700"
-              >
-                Check Slot in Your Area
-              </button>
-            </div>
-          </div>
+          <div className="grid lg:grid-cols-12">
+            {/* Left Location Info + Action Buttons */}
+            <div className="flex flex-col justify-between p-8 sm:p-10 lg:col-span-6">
+              <div>
+                <span className="text-xs font-extrabold uppercase tracking-widest text-sky-700">
+                  Find us on Google Maps
+                </span>
+                <h3 className="mt-1.5 text-2xl font-extrabold text-slate-900">
+                  DSP Doorstep Coverage &amp; Hub
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  We bring our mobile washing &amp; sanitization van directly to residential societies, apartments, and office parking lots across Pune &amp; PCMC.
+                </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {SERVICE_AREAS.map((area) => (
-              <span
-                key={area}
-                className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-xs font-semibold text-slate-700"
-              >
-                📍 {area}
-              </span>
-            ))}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {SERVICE_AREAS.map((area) => (
+                    <span
+                      key={area}
+                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700"
+                    >
+                      📍 {area}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-6">
+                <button
+                  onClick={onOpenCart}
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#0b2d6b] px-6 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-sky-700 sm:text-sm"
+                >
+                  <Clock className="h-4 w-4" />
+                  Select Slot &amp; Drop Pin
+                </button>
+                <a
+                  href="https://maps.google.com/?q=Pune,Maharashtra"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 transition hover:border-[#0b2d6b] hover:text-[#0b2d6b] sm:text-sm"
+                >
+                  <Navigation className="h-4 w-4 text-[#0b2d6b]" />
+                  Open Google Maps
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right Embedded Live Google Map */}
+            <div className="min-h-[300px] border-t border-slate-200 bg-slate-100 lg:col-span-6 lg:border-t-0 lg:border-l">
+              <iframe
+                title="DSP Pune Service Coverage Map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=73.7600%2C18.4500%2C73.9600%2C18.5900&layer=mapnik&marker=18.5204%2C73.8567"
+                className="h-full min-h-[320px] w-full border-0"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>

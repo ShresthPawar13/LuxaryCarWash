@@ -1,7 +1,8 @@
-import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 import DspLogo from "./DspLogo";
+import { buildWhatsAppBookingUrl } from "../utils/whatsapp";
 
-export default function Footer({ onOpenBooking }) {
+export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
@@ -11,16 +12,18 @@ export default function Footer({ onOpenBooking }) {
               Ready for a cleaner, sanitized ride?
             </h3>
             <p className="mt-2 text-sm text-sky-100">
-              Clean Today. Healthy Tomorrow. Book your doorstep bike or car wash with DSP today.
+              Clean Today. Healthy Tomorrow. Chat directly on WhatsApp to confirm your doorstep slot.
             </p>
           </div>
-          <button
-            onClick={() => onOpenBooking()}
-            className="inline-flex shrink-0 cursor-pointer items-center gap-2 rounded-full bg-lime-400 px-7 py-3.5 text-sm font-extrabold text-[#0b2d6b] shadow-sm transition hover:bg-lime-300"
+          <a
+            href={buildWhatsAppBookingUrl()}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-emerald-500 px-7 py-3.5 text-sm font-extrabold text-white shadow-sm transition hover:bg-emerald-400"
           >
-            Book Doorstep Wash
-            <ArrowUpRight className="h-4 w-4" />
-          </button>
+            <MessageCircle className="h-4 w-4" />
+            Chat on WhatsApp ↗
+          </a>
         </div>
       </div>
 
@@ -57,7 +60,7 @@ export default function Footer({ onOpenBooking }) {
                 Packages
               </a>
               <a href="#addons" className="hover:text-[#0b2d6b]">
-                Add-on Services
+                Add-on Cart
               </a>
               <a href="#workflow" className="hover:text-[#0b2d6b]">
                 How It Works
@@ -66,7 +69,7 @@ export default function Footer({ onOpenBooking }) {
                 About DSP
               </a>
               <a href="#location" className="hover:text-[#0b2d6b]">
-                Service Areas
+                Google Maps &amp; Areas
               </a>
               <a href="#faqs" className="hover:text-[#0b2d6b]">
                 FAQs
