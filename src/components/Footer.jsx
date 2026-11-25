@@ -1,60 +1,82 @@
-import { Droplets, MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
+import DspLogo from "./DspLogo";
 
-export default function Footer() {
+export default function Footer({ onOpenBooking }) {
   return (
-    <footer className="border-t border-slate-800 bg-[#060910] py-12 text-slate-400">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
+    <footer className="border-t border-slate-200 bg-[#f8fafc]">
+      <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-between gap-6 rounded-[28px] bg-[#0b2d6b] px-8 py-12 text-center text-white shadow-lg sm:flex-row sm:text-left">
           <div>
-            <div className="flex items-center gap-2 text-white">
-              <Droplets className="h-6 w-6 text-cyan-400" />
-              <span className="text-lg font-bold">
-                Aqua<span className="text-cyan-400">Shine</span> Auto Spa
-              </span>
-            </div>
-            <p className="mt-3 text-sm leading-relaxed">
-              Every Ride Deserves to Shine. Complete bike &amp; car washing,
-              snow foam spa, and studio detailing center.
+            <h3 className="text-2xl font-extrabold sm:text-3xl">
+              Ready for a cleaner, sanitized ride?
+            </h3>
+            <p className="mt-2 text-sm text-sky-100">
+              Clean Today. Healthy Tomorrow. Book your doorstep bike or car wash with DSP today.
+            </p>
+          </div>
+          <button
+            onClick={() => onOpenBooking()}
+            className="inline-flex shrink-0 cursor-pointer items-center gap-2 rounded-full bg-lime-400 px-7 py-3.5 text-sm font-extrabold text-[#0b2d6b] shadow-sm transition hover:bg-lime-300"
+          >
+            Book Doorstep Wash
+            <ArrowUpRight className="h-4 w-4" />
+          </button>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <DspLogo variant="compact" />
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              Doorstep Sanitization Providers (DSP) — Bringing convenience,
+              hygiene, and a fresh showroom clean directly to your parking spot.
             </p>
           </div>
 
-          <div className="space-y-2 text-sm">
-            <h4 className="font-semibold text-white">Center Info</h4>
+          <div className="space-y-2.5 text-sm text-slate-600">
+            <h4 className="font-extrabold text-slate-900">Contact &amp; Booking</h4>
             <p className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-cyan-400" />
-              Main Auto Hub Road, Pune, Maharashtra
+              <MapPin className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
+              Doorstep Service Across Pune &amp; PCMC
             </p>
             <p className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-cyan-400" />
+              <Phone className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
               +91 98765 43210
             </p>
             <p className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-cyan-400" />
-              Mon – Sun: 8:30 AM – 8:30 PM
+              <Clock className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
+              Mon – Sun: 8:00 AM – 8:30 PM
             </p>
           </div>
 
-          <div className="space-y-2 text-sm">
-            <h4 className="font-semibold text-white">Quick Navigation</h4>
-            <div className="flex flex-col space-y-1.5">
-              <a href="#packages" className="hover:text-cyan-400">
-                Bike &amp; Car Packages
+          <div className="space-y-2.5 text-sm text-slate-600">
+            <h4 className="font-extrabold text-slate-900">Explore</h4>
+            <div className="flex flex-col space-y-1.5 font-medium">
+              <a href="#packages" className="hover:text-[#0b2d6b]">
+                Packages
               </a>
-              <a href="#services" className="hover:text-cyan-400">
-                Ceramic &amp; Detailing Studio
+              <a href="#addons" className="hover:text-[#0b2d6b]">
+                Add-on Services
               </a>
-              <a href="#workflow" className="hover:text-cyan-400">
-                6-Step Care Process
+              <a href="#workflow" className="hover:text-[#0b2d6b]">
+                How It Works
               </a>
-              <a href="#offers" className="hover:text-cyan-400">
-                Loyalty &amp; Opening Offers
+              <a href="#about" className="hover:text-[#0b2d6b]">
+                About DSP
+              </a>
+              <a href="#location" className="hover:text-[#0b2d6b]">
+                Service Areas
+              </a>
+              <a href="#faqs" className="hover:text-[#0b2d6b]">
+                FAQs
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-slate-800/80 pt-6 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} AquaShine Auto Spa. All rights reserved.
+        <div className="mt-10 border-t border-slate-200 pt-6 text-center text-xs font-medium text-slate-500">
+          © {new Date().getFullYear()} Doorstep Sanitization Providers (DSP). All Rights Reserved. Clean Today. Healthy Tomorrow.
         </div>
       </div>
     </footer>
