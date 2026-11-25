@@ -1,106 +1,205 @@
 import { motion } from "framer-motion";
-import { Check, ArrowDown, ShieldCheck, Sparkles, Star, MessageCircle } from "lucide-react";
+import {
+  Check,
+  ArrowDown,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  MessageCircle,
+  Home,
+  Car,
+} from "lucide-react";
 import { HERO_MEDIA } from "../data/servicesData";
 import { buildWhatsAppBookingUrl } from "../utils/whatsapp";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.05 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 110, damping: 16 },
+  },
+};
+
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/50 to-[#f8fafc] pt-10 pb-16 sm:pt-16 sm:pb-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-[#f8fafc] pt-10 pb-16 sm:pt-16 sm:pb-24">
+      {/* Subtle Animated Background Glows */}
+      <motion.div
+        animate={{ scale: [1, 1.12, 1], opacity: [0.35, 0.55, 0.35] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-sky-200/50 blur-3xl"
+      />
+      <motion.div
+        animate={{ scale: [1.1, 1, 1.1], opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute top-20 right-0 h-80 w-80 rounded-full bg-lime-200/45 blur-3xl"
+      />
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        {/* Left Staggered Copy */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className="lg:col-span-6"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-3.5 py-1.5 text-xs font-bold text-[#0b2d6b] shadow-2xs">
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-3.5 py-1.5 text-xs font-bold text-[#0b2d6b] shadow-2xs"
+          >
             <Sparkles className="h-3.5 w-3.5 text-lime-600" />
-            20% Opening Offer • 6th Wash Free Loyalty
-          </div>
+            Cars • Bikes • Home Cleaning &amp; Sanitization
+          </motion.div>
 
-          <h1 className="mt-5 text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-5xl lg:text-[56px]">
-            Clean ride.{" "}
-            <span className="text-[#0b2d6b]">Zero travel.</span>
-          </h1>
+          <motion.h1
+            variants={itemVariants}
+            className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[54px]"
+          >
+            Clean home &amp; ride.{" "}
+            <span className="bg-gradient-to-r from-[#0b2d6b] via-sky-600 to-lime-600 bg-clip-text text-transparent">
+              Zero travel.
+            </span>
+          </motion.h1>
 
-          <p className="mt-2 text-lg font-bold text-sky-700 sm:text-xl">
-            Doorstep Bike &amp; Car Wash + Sanitization in Pune.
-          </p>
+          <motion.p
+            variants={itemVariants}
+            className="mt-3 text-lg font-bold text-sky-700 sm:text-xl"
+          >
+            Doorstep Car, Bike &amp; Home Sanitization in Pune.
+          </motion.p>
 
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-            Professional doorstep washing &amp; cabin sanitization brought directly
-            to your parking spot. Pick your package &amp; add-ons below and send your
-            booking directly on WhatsApp in one click.
-          </p>
+          <motion.p
+            variants={itemVariants}
+            className="mt-4 max-w-xl text-base leading-relaxed text-slate-600"
+          >
+            From snow-foam car &amp; bike washing to deep home, sofa, kitchen &amp;
+            bathroom sanitization — <strong>Doorstep Sanitization Providers (DSP)</strong>{" "}
+            brings hospital-grade hygiene and showroom shine right to your door.
+          </motion.p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3.5">
-            <a
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 flex flex-wrap items-center gap-3.5"
+          >
+            <motion.a
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.98 }}
               href={buildWhatsAppBookingUrl()}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-900/15 transition hover:-translate-y-0.5 hover:bg-emerald-700"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-900/15 transition hover:bg-emerald-700"
             >
               <MessageCircle className="h-4 w-4" />
               Book on WhatsApp ↗
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.98 }}
               href="#packages"
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-2xs transition hover:border-[#0b2d6b] hover:text-[#0b2d6b]"
             >
-              Build Your Wash Plan
+              Explore Packages
               <ArrowDown className="h-4 w-4" />
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700">
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700"
+          >
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> At your doorstep
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Car &amp; Bike Spa
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Simple ₹ pricing
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Home &amp; Sofa Cleaning
             </span>
             <span className="flex items-center gap-1.5">
               <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> 1-Tap WhatsApp Slot
             </span>
-          </div>
+          </motion.div>
         </motion.div>
 
+        {/* Right Dual-Photo Animated Collage (Vehicle + Home Sanitization) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
           className="relative lg:col-span-6"
         >
-          <div className="overflow-hidden rounded-[28px] border border-slate-200/90 bg-white p-2 shadow-xl">
+          {/* Main Car Wash Photo */}
+          <motion.div
+            whileHover={{ scale: 1.015 }}
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            className="overflow-hidden rounded-[28px] border border-slate-200/90 bg-white p-2 shadow-xl"
+          >
             <img
               src={HERO_MEDIA.main}
-              alt="Doorstep Sanitization Providers snow foam car wash"
-              className="h-[340px] w-full rounded-[22px] object-cover sm:h-[430px]"
+              alt="Doorstep Car & Bike Snow Foam Wash"
+              className="h-[320px] w-full rounded-[22px] object-cover sm:h-[400px]"
             />
-          </div>
+          </motion.div>
 
+          {/* Secondary Overlapping Home Cleaning Photo Card */}
           <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-lg sm:left-6"
+            initial={{ opacity: 0, x: 24, y: 20 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            whileHover={{ scale: 1.04 }}
+            className="absolute -right-2 -bottom-7 hidden w-56 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-xl sm:block"
+          >
+            <img
+              src={HERO_MEDIA.home}
+              alt="Doorstep Home Cleaning & Sanitization"
+              className="h-28 w-full object-cover"
+            />
+            <div className="flex items-center gap-2 bg-white px-3 py-2">
+              <Home className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
+              <span className="text-[11px] font-extrabold text-slate-900">
+                Home &amp; Sofa Deep Clean
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Floating Bottom-Left Trust Badge */}
+          <motion.div
+            animate={{ y: [0, -7, 0] }}
+            transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur sm:left-6"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-100 text-lime-700">
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-xs font-extrabold text-slate-900">pH-Neutral Foam &amp; Sanitization</p>
-              <p className="text-[11px] font-medium text-slate-500">Safe for bikes, cars &amp; ceramic coats</p>
+              <p className="text-xs font-extrabold text-slate-900">
+                100% Safe &amp; Eco-Friendly
+              </p>
+              <p className="text-[11px] font-medium text-slate-500">
+                Kid-safe home &amp; paint-safe car care
+              </p>
             </div>
           </motion.div>
 
+          {/* Floating Top-Right Rating Pill */}
           <motion.div
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -top-4 right-4 flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-md sm:right-6"
           >
             <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
             <span className="text-xs font-extrabold text-slate-900">4.9/5</span>
-            <span className="text-xs font-medium text-slate-500">Pune Doorstep Care</span>
+            <span className="text-xs font-medium text-slate-500">
+              <Car className="mr-1 inline h-3.5 w-3.5 text-sky-600" />
+              Pune Doorstep Care
+            </span>
           </motion.div>
         </motion.div>
       </div>
