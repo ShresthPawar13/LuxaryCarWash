@@ -6,7 +6,7 @@ import {
   Sparkles,
   Star,
   MessageCircle,
-  Home,
+  Bike,
   Car,
 } from "lucide-react";
 import { HERO_MEDIA } from "../data/servicesData";
@@ -32,7 +32,6 @@ const itemVariants = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-[#f8fafc] pt-10 pb-16 sm:pt-16 sm:pb-24">
-      {/* Subtle Animated Background Glows */}
       <motion.div
         animate={{ scale: [1, 1.12, 1], opacity: [0.35, 0.55, 0.35] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -45,7 +44,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
-        {/* Left Staggered Copy */}
+        {/* Left Car & Bike Focused Copy */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -57,14 +56,14 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-3.5 py-1.5 text-xs font-bold text-[#0b2d6b] shadow-2xs"
           >
             <Sparkles className="h-3.5 w-3.5 text-lime-600" />
-            Cars • Bikes • Home Cleaning &amp; Sanitization
+            Doorstep Car &amp; Bike Wash · Plus Sofa &amp; Home Sanitization
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
             className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[54px]"
           >
-            Clean home &amp; ride.{" "}
+            Clean ride.{" "}
             <span className="bg-gradient-to-r from-[#0b2d6b] via-sky-600 to-lime-600 bg-clip-text text-transparent">
               Zero travel.
             </span>
@@ -74,16 +73,17 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-3 text-lg font-bold text-sky-700 sm:text-xl"
           >
-            Doorstep Car, Bike &amp; Home Sanitization in Pune.
+            Doorstep Car &amp; Bike Wash + Sanitization in Pune.
           </motion.p>
 
           <motion.p
             variants={itemVariants}
             className="mt-4 max-w-xl text-base leading-relaxed text-slate-600"
           >
-            From snow-foam car &amp; bike washing to deep home, sofa, kitchen &amp;
-            bathroom sanitization — <strong>Doorstep Sanitization Providers (DSP)</strong>{" "}
-            brings hospital-grade hygiene and showroom shine right to your door.
+            <strong>Doorstep Sanitization Providers (DSP)</strong> brings professional
+            snow-foam car &amp; bike washing, interior cabin detailing, and
+            anti-bacterial sanitization right to your parking spot — plus on-demand
+            sofa &amp; home cleaning whenever you need it.
           </motion.p>
 
           <motion.div
@@ -107,7 +107,7 @@ export default function Hero() {
               href="#packages"
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-2xs transition hover:border-[#0b2d6b] hover:text-[#0b2d6b]"
             >
-              Explore Packages
+              Car &amp; Bike Packages
               <ArrowDown className="h-4 w-4" />
             </motion.a>
           </motion.div>
@@ -117,18 +117,18 @@ export default function Hero() {
             className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700"
           >
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Car &amp; Bike Spa
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Car Foam &amp; Detailing
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Home &amp; Sofa Cleaning
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Bike Spa &amp; Chain Care
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> 1-Tap WhatsApp Slot
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Sofa &amp; Home Add-ons
             </span>
           </motion.div>
         </motion.div>
 
-        {/* Right Dual-Photo Animated Collage (Vehicle + Home Sanitization) */}
+        {/* Right Car + Bike Dual Photo Collage */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -143,12 +143,12 @@ export default function Hero() {
           >
             <img
               src={HERO_MEDIA.main}
-              alt="Doorstep Car & Bike Snow Foam Wash"
+              alt="Doorstep Car Snow Foam Wash"
               className="h-[320px] w-full rounded-[22px] object-cover sm:h-[400px]"
             />
           </motion.div>
 
-          {/* Secondary Overlapping Home Cleaning Photo Card */}
+          {/* Overlapping Bike Spa Photo Card */}
           <motion.div
             initial={{ opacity: 0, x: 24, y: 20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -157,14 +157,14 @@ export default function Hero() {
             className="absolute -right-2 -bottom-7 hidden w-56 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-xl sm:block"
           >
             <img
-              src={HERO_MEDIA.home}
-              alt="Doorstep Home Cleaning & Sanitization"
+              src={HERO_MEDIA.bike}
+              alt="Doorstep Bike Spa & Chain Care"
               className="h-28 w-full object-cover"
             />
             <div className="flex items-center gap-2 bg-white px-3 py-2">
-              <Home className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
+              <Bike className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
               <span className="text-[11px] font-extrabold text-slate-900">
-                Home &amp; Sofa Deep Clean
+                Two-Wheeler Foam Spa
               </span>
             </div>
           </motion.div>
@@ -180,10 +180,10 @@ export default function Hero() {
             </div>
             <div>
               <p className="text-xs font-extrabold text-slate-900">
-                100% Safe &amp; Eco-Friendly
+                pH-Neutral Foam &amp; Sanitization
               </p>
               <p className="text-[11px] font-medium text-slate-500">
-                Kid-safe home &amp; paint-safe car care
+                Safe for cars, bikes &amp; upholstery
               </p>
             </div>
           </motion.div>

@@ -1,6 +1,6 @@
 export const HERO_MEDIA = {
   main: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1400&q=80",
-  home: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
+  bike: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80",
 };
 
 export const CAR_PACKAGES = [
@@ -137,15 +137,58 @@ export const BIKE_PACKAGES = [
 
 export const HOME_PACKAGES = [
   {
-    id: "home-express",
+    id: "home-sofa-spa",
     category: "Home",
-    tag: "Essential Hygiene",
-    name: "Room & Surface Sanitization",
+    tag: "Sofa & Upholstery Care",
+    featured: true,
+    name: "Sofa, Mattress & Carpet Deep Cleaning",
     description:
-      "Hospital-grade, eco-safe ULV fogging and high-touch surface disinfection for bedrooms, living rooms, and home offices.",
+      "Deep vacuum extraction, fabric shampooing, and 180°C steam sanitization to lift stains, dust mites, and allergens from sofas and mattresses.",
+    price: "₹799",
+    numericPrice: 799,
+    billing: "/ Up to 5-Seater Sofa",
+    duration: "60–90 mins",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+    features: [
+      "HEPA dry vacuuming for dust & pet hair",
+      "Fabric-safe foam shampooing & stain lifting",
+      "Wet extraction & fast-dry moisture removal",
+      "Anti-bacterial steam sanitization",
+      "Fresh anti-odor fabric conditioning",
+    ],
+  },
+  {
+    id: "home-deep-clean",
+    category: "Home",
+    tag: "Full Home Hygiene",
+    name: "Home Deep Cleaning & Sanitization",
+    description:
+      "Complete residential deep cleaning covering living spaces, kitchen degreasing, bathroom descaling, and full home disinfection.",
+    price: "₹1,499",
+    numericPrice: 1499,
+    billing: "/ 1–2 BHK Home",
+    duration: "2.5–3.5 hours",
+    image:
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
+    features: [
+      "Full floor scrubbing & machine mopping",
+      "Kitchen tiles, chimney exterior & slab degreasing",
+      "Bathroom tiles, fittings & sanitaryware descaling",
+      "Window tracks, grills, fans & cobweb removal",
+      "Hospital-grade ULV mist sanitization",
+    ],
+  },
+  {
+    id: "home-sanitization",
+    category: "Home",
+    tag: "Quick Disinfection",
+    name: "Room & High-Touch Surface Sanitization",
+    description:
+      "Non-toxic, kid- and pet-safe ULV fogging and surface disinfection for bedrooms, living rooms, and home offices.",
     price: "₹499",
     numericPrice: 499,
-    billing: "/ 1–2 BHK service",
+    billing: "/ Full Flat Session",
     duration: "45 mins",
     image:
       "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80",
@@ -154,86 +197,15 @@ export const HOME_PACKAGES = [
       "Door handles, switches, tables & railings wipe",
       "Living room & bedroom dust vacuuming",
       "Kitchen counter & sink disinfection",
-      "Child-safe & pet-friendly formula",
-    ],
-  },
-  {
-    id: "home-deep-clean",
-    category: "Home",
-    tag: "Most popular",
-    featured: true,
-    name: "Complete Home Deep Cleaning & Sanitization",
-    description:
-      "Top-to-bottom residential deep cleaning covering living spaces, kitchen degreasing, bathroom descaling, and full home sanitization.",
-    price: "₹1,499",
-    numericPrice: 1499,
-    billing: "/ Full Home Package",
-    duration: "2.5–3.5 hours",
-    image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
-    features: [
-      "Full floor machine scrubbing & mopping",
-      "Kitchen tiles, chimney exterior & slab degreasing",
-      "Bathroom tiles, fittings & sanitaryware descaling",
-      "Window tracks, grills, fans & cobweb removal",
-      "Full-home anti-bacterial steam & mist sanitization",
-    ],
-  },
-  {
-    id: "home-sofa-mattress",
-    category: "Home",
-    tag: "Upholstery & Living",
-    name: "Sofa, Mattress & Carpet Spa",
-    description:
-      "Deep vacuum extraction, shampooing, and steam sanitization to remove stains, dust mites, and allergens from home upholstery.",
-    price: "₹899",
-    numericPrice: 899,
-    billing: "/ Up to 5-Seater Sofa",
-    duration: "60–90 mins",
-    image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
-    features: [
-      "HEPA dry vacuuming for dust & pet hair",
-      "Fabric-safe foam shampooing & stain lifting",
-      "Wet extraction & fast-dry moisture removal",
-      "180°C steam sanitization against germs & mites",
-      "Fresh anti-odor fabric conditioning",
     ],
   },
 ];
 
 export const ADDON_SERVICES = [
   {
-    id: "sofa-shampoo",
-    title: "Home Sofa Shampoo & Steam (3-Seater)",
-    desc: "Deep foam shampooing and steam sanitization to lift stains and allergens from living room sofas.",
-    price: "₹499",
-    numericPrice: 499,
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: "bathroom-sanitize",
-    title: "Bathroom Descaling & Sanitization",
-    desc: "Removes hard-water stains, cleans tiles and fittings, and sanitizes washrooms completely.",
-    price: "₹349",
-    numericPrice: 349,
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: "kitchen-degrease",
-    title: "Kitchen Chimney & Slab Degreasing",
-    desc: "Cuts through tough cooking oil residue on stove slabs, backsplash tiles, and exhaust hoods.",
-    price: "₹449",
-    numericPrice: 449,
-    image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80",
-  },
-  {
     id: "seat-cleaning",
     title: "Car Seat Deep Cleaning",
-    desc: "Deep-focused cleaning & sanitization to lift embedded dirt and stains from fabric or leather car seats.",
+    desc: "Deep-focused shampooing & sanitization to lift embedded dirt and stains from fabric or leather car seats.",
     price: "₹399",
     numericPrice: 399,
     image:
@@ -249,6 +221,15 @@ export const ADDON_SERVICES = [
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80",
   },
   {
+    id: "dashboard-polish",
+    title: "Dashboard & Door Trim Polish",
+    desc: "Sanitizes and cleans interior car dashboard & door trims with a neat, non-greasy factory matte finish.",
+    price: "₹199",
+    numericPrice: 199,
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80",
+  },
+  {
     id: "headlight-restoration",
     title: "Headlight Restoration (Both)",
     desc: "Improves night visibility and appearance by treating dull, hazy, oxidized outer lens surfaces.",
@@ -257,13 +238,31 @@ export const ADDON_SERVICES = [
     image:
       "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=700&q=80",
   },
+  {
+    id: "sofa-shampoo",
+    title: "Home Sofa Shampoo & Steam (3-Seater)",
+    desc: "Deep foam shampooing and steam sanitization to lift stains and allergens from living room sofas.",
+    price: "₹499",
+    numericPrice: 499,
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80",
+  },
+  {
+    id: "home-room-sanitize",
+    title: "Bathroom / Kitchen Deep Sanitization",
+    desc: "Targeted descaling, degreasing, and anti-bacterial sanitization for home bathrooms or kitchen slabs.",
+    price: "₹399",
+    numericPrice: 399,
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80",
+  },
 ];
 
 export const WORKFLOW_STEPS = [
   {
     step: "01",
-    title: "Pick Car, Bike or Home Service",
-    desc: "Select your wash or home sanitization package and bundle any add-ons in your Service Cart.",
+    title: "Pick Car, Bike or Sofa/Home Service",
+    desc: "Select your car wash, bike spa, or add-on sofa & home sanitization in your Service Cart.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80",
   },
@@ -277,9 +276,9 @@ export const WORKFLOW_STEPS = [
   {
     step: "03",
     title: "Relax — DSP comes to you",
-    desc: "Our uniformed DSP specialists arrive at your home or parking spot and leave everything spotless & sanitized.",
+    desc: "Our uniformed DSP specialists arrive at your parking spot or home and deliver a sanitized showroom shine.",
     image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80",
+      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=700&q=80",
   },
 ];
 
@@ -298,19 +297,19 @@ export const SERVICE_AREAS = [
 
 export const FAQS = [
   {
-    q: "What doorstep services does DSP provide?",
-    a: "Doorstep Sanitization Providers (DSP) offers complete doorstep Car Washing & Detailing, Bike Spa & Chain Care, and Home Deep Cleaning & Sanitization (including sofa shampooing, kitchen degreasing, bathroom descaling, and full-home disinfection).",
+    q: "What doorstep services does DSP specialize in?",
+    a: "Doorstep Sanitization Providers (DSP) specializes primarily in doorstep Car Washing & Detailing and Bike Spa & Chain Care, while also offering Sofa Shampooing and Home Cleaning & Sanitization upon request.",
   },
   {
-    q: "Do you bring your own water, machines, and sanitization equipment?",
-    a: "Yes! Our mobile team arrives with pressure washers, vacuum extractors, steam sanitizers, pH-neutral snow foam, and hospital-grade disinfectants. For vehicle washes, we only need a power socket within 100 ft (we carry a 100-ft extension cable).",
+    q: "Do you bring your own water, foam, and equipment?",
+    a: "Yes! Our mobile team arrives with pressure washers, pH-neutral snow foam, vacuum extractors, and sanitization gear. For vehicle washes, we only need a standard power point within 100 ft (we carry a 100-ft extension cable).",
   },
   {
-    q: "How do I book and share my location?",
-    a: "Select your package and any add-on services in the Service Cart, choose your date & time slot, tap 'Use My GPS Pin' (or paste your Google Maps link), and click 'Send Booking on WhatsApp' — your full booking message is generated automatically.",
+    q: "Can I book Car, Bike, and Sofa/Home services together?",
+    a: "Yes! You can add Car packages, Bike packages, and Sofa or Home Cleaning add-ons into the same Service Cart, select your preferred slot and Google Maps location, and send the complete order on WhatsApp in one click.",
   },
   {
-    q: "Are your chemicals safe for kids, pets, and vehicle paint?",
-    a: "100%. We use biodegradable, non-toxic, hospital-grade home sanitizers that are safe for children and pets, and pH-neutral shampoos that protect factory paint and ceramic coatings.",
+    q: "Are your chemicals safe for vehicle paint and home fabrics?",
+    a: "100%. We use pH-neutral shampoos safe for factory clear coats and ceramic coatings, as well as non-toxic, child- and pet-safe upholstery shampoos and sanitizers.",
   },
 ];

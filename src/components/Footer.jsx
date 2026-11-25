@@ -12,7 +12,7 @@ export default function Footer() {
               Ready for a cleaner, sanitized ride?
             </h3>
             <p className="mt-2 text-sm text-sky-100">
-              Clean Today. Healthy Tomorrow. Chat directly on WhatsApp to confirm your doorstep slot.
+              Chat directly on WhatsApp to confirm your doorstep Car, Bike, or Sofa &amp; Home cleaning slot.
             </p>
           </div>
           <a
@@ -32,8 +32,8 @@ export default function Footer() {
           <div>
             <DspLogo variant="compact" />
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              Doorstep Sanitization Providers (DSP) — Bringing convenience,
-              hygiene, and a fresh showroom clean directly to your parking spot.
+              Doorstep Sanitization Providers (DSP) — Professional doorstep Car &amp;
+              Bike washing, detailing, and Sofa/Home sanitization delivered to you.
             </p>
           </div>
 
@@ -57,10 +57,10 @@ export default function Footer() {
             <h4 className="font-extrabold text-slate-900">Explore</h4>
             <div className="flex flex-col space-y-1.5 font-medium">
               <a href="#packages" className="hover:text-[#0b2d6b]">
-                Packages
+                Car &amp; Bike Packages
               </a>
               <a href="#addons" className="hover:text-[#0b2d6b]">
-                Add-on Cart
+                Add-on Cart (Car &amp; Sofa)
               </a>
               <a href="#workflow" className="hover:text-[#0b2d6b]">
                 How It Works
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-center text-xs font-medium text-slate-500">
-          © {new Date().getFullYear()} Doorstep Sanitization Providers (DSP). All Rights Reserved. Clean Today. Healthy Tomorrow.
+          © {new Date().getFullYear()} Doorstep Sanitization Providers (DSP). All Rights Reserved.
         </div>
       </div>
     </footer>

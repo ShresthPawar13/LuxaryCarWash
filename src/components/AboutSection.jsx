@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Target, Compass, CheckCircle2, MapPin, ExternalLink, Clock, Navigation } from "lucide-react";
+import { Target, Compass, CheckCircle2, Clock, Navigation, ExternalLink } from "lucide-react";
 import DspLogo from "./DspLogo";
 import { SERVICE_AREAS } from "../data/servicesData";
 
 export default function AboutSection({ onOpenCart }) {
   const objectives = [
-    "Deliver reliable, showroom-grade bike and car washing right at your doorstep.",
-    "Maintain strict cabin hygiene and vehicle sanitization standards for healthier commutes.",
+    "Specialize in doorstep snow-foam car washing, bike spa, and interior cabin sanitization.",
+    "Provide on-demand sofa shampooing and home deep sanitization with safe, eco-friendly solutions.",
     "Follow a documented 6-point pre-wash and post-wash quality inspection on every visit.",
     "Build lasting customer trust through transparent ₹ pricing, monthly plans, and 6th-wash-free rewards.",
   ];
@@ -14,7 +14,6 @@ export default function AboutSection({ onOpenCart }) {
   return (
     <section id="about" className="border-t border-slate-200/80 bg-[#f8fafc] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Company Profile + HD Animated DSP Emblem */}
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -25,7 +24,7 @@ export default function AboutSection({ onOpenCart }) {
           >
             <DspLogo variant="full" />
             <p className="mt-4 text-center text-xs font-bold uppercase tracking-wider text-slate-500">
-              Two-Wheelers • Hatchbacks • Sedans • SUVs • Fleets
+              Cars • Bikes • Sofas • Residential Sanitization
             </p>
           </motion.div>
 
@@ -40,22 +39,21 @@ export default function AboutSection({ onOpenCart }) {
               About Doorstep Sanitization Providers (DSP)
             </span>
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              Clean Today. Healthy Tomorrow.
+              Showroom Vehicle Care &amp; Sanitization at Your Doorstep
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600">
               <strong>Doorstep Sanitization Providers (DSP)</strong> is a dedicated
-              doorstep bike &amp; car washing, cabin sanitization, and studio detailing
-              company built to make vehicle care effortless. Instead of rushing your
-              ride through an ordinary roadside rinse, we deliver a structured,
-              spa-grade cleaning and sanitization experience right in your parking spot.
+              doorstep car and bike washing, detailing, and sanitization company
+              built to make vehicle maintenance effortless. Instead of waiting at
+              crowded wash centers, you get a structured, spa-grade foam wash and
+              interior sanitization right at your parking spot.
             </p>
 
             <p className="mt-3 text-base leading-relaxed text-slate-600">
-              From routine snow-foam exterior washes and bike chain lubrication to
-              deep interior vacuuming, steam AC sanitization, headlight restoration,
-              and ceramic paint protection, our trained specialists treat every
-              vehicle with precision and care.
+              Alongside our core two-wheeler and four-wheeler care packages, DSP
+              also provides sofa shampooing, mattress steam cleaning, and home
+              surface sanitization—all bookable in a single combined cart.
             </p>
 
             <ul className="mt-6 space-y-2.5">
@@ -80,9 +78,9 @@ export default function AboutSection({ onOpenCart }) {
             </div>
             <h3 className="mt-5 text-xl font-extrabold text-slate-900">Our Vision</h3>
             <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-              To become India’s most trusted doorstep vehicle washing, sanitization,
-              and detailing brand—recognized for consistent quality, eco-conscious
-              water practices, transparent pricing, and unmatched convenience.
+              To become India’s most trusted doorstep car &amp; bike washing and
+              sanitization brand—recognized for consistent quality, water-smart
+              practices, transparent pricing, and unmatched convenience.
             </p>
           </div>
 
@@ -92,21 +90,20 @@ export default function AboutSection({ onOpenCart }) {
             </div>
             <h3 className="mt-5 text-xl font-extrabold text-slate-900">Our Mission</h3>
             <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-              To deliver professional vehicle cleaning, sanitization, and paint
-              protection using modern equipment, safe pH-neutral products, and
-              skilled technicians—ensuring every customer enjoys a cleaner, healthier,
-              and shinier ride without leaving home.
+              To deliver professional vehicle cleaning, sanitization, and sofa/home
+              hygiene care using modern equipment, safe pH-neutral products, and
+              skilled technicians—ensuring a cleaner, healthier experience without
+              leaving home.
             </p>
           </div>
         </div>
 
-        {/* Interactive Google Maps Location & Slot Card */}
+        {/* Location & Slot Card */}
         <div
           id="location"
           className="mt-14 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm"
         >
           <div className="grid lg:grid-cols-12">
-            {/* Left Location Info + Action Buttons */}
             <div className="flex flex-col justify-between p-8 sm:p-10 lg:col-span-6">
               <div>
                 <span className="text-xs font-extrabold uppercase tracking-widest text-sky-700">
@@ -116,7 +113,7 @@ export default function AboutSection({ onOpenCart }) {
                   DSP Doorstep Coverage &amp; Hub
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  We bring our mobile washing &amp; sanitization van directly to residential societies, apartments, and office parking lots across Pune &amp; PCMC.
+                  We bring our mobile washing &amp; sanitization setup directly to residential societies, apartments, and office parking lots across Pune &amp; PCMC.
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -152,7 +149,6 @@ export default function AboutSection({ onOpenCart }) {
               </div>
             </div>
 
-            {/* Right Embedded Live Google Map */}
             <div className="min-h-[300px] border-t border-slate-200 bg-slate-100 lg:col-span-6 lg:border-t-0 lg:border-l">
               <iframe
                 title="DSP Pune Service Coverage Map"

@@ -5,7 +5,7 @@ export default function DspLogo({ variant = "full", className = "" }) {
     return (
       <div className={`inline-flex items-center gap-3 select-none ${className}`}>
         <motion.svg
-          viewBox="0 0 220 200"
+          viewBox="0 0 220 185"
           className="h-12 w-13 shrink-0"
           whileHover={{ scale: 1.05 }}
         >
@@ -114,8 +114,8 @@ export default function DspLogo({ variant = "full", className = "" }) {
           <span className="block text-sm font-extrabold tracking-tight text-[#0b2d6b] sm:text-base">
             Doorstep Sanitization Providers
           </span>
-          <span className="mt-0.5 inline-block rounded-full bg-[#0b2d6b] px-2.5 py-0.5 text-[10px] font-semibold italic tracking-wide text-white">
-            Clean Today. Healthy Tomorrow.
+          <span className="mt-0.5 block text-[11px] font-bold uppercase tracking-wider text-sky-700">
+            Car &amp; Bike Wash · Auto &amp; Home Care
           </span>
         </div>
       </div>
@@ -131,10 +131,10 @@ export default function DspLogo({ variant = "full", className = "" }) {
       className={`inline-flex flex-col items-center select-none ${className}`}
     >
       <svg
-        viewBox="0 0 360 355"
+        viewBox="0 0 360 315"
         className="h-auto w-64 sm:w-72 drop-shadow-sm"
         role="img"
-        aria-label="Doorstep Sanitization Providers (DSP) - Clean Today. Healthy Tomorrow."
+        aria-label="Doorstep Sanitization Providers (DSP)"
       >
         <defs>
           <linearGradient id="dspGreenFull" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -253,7 +253,7 @@ export default function DspLogo({ variant = "full", className = "" }) {
 
         <text
           x="180"
-          y="266"
+          y="268"
           textAnchor="middle"
           fill="#0b2d6b"
           fontFamily="Plus Jakarta Sans, sans-serif"
@@ -265,7 +265,7 @@ export default function DspLogo({ variant = "full", className = "" }) {
         </text>
         <text
           x="180"
-          y="294"
+          y="296"
           textAnchor="middle"
           fill="#0b2d6b"
           fontFamily="Plus Jakarta Sans, sans-serif"
@@ -274,21 +274,6 @@ export default function DspLogo({ variant = "full", className = "" }) {
           letterSpacing="-0.3"
         >
           Providers
-        </text>
-
-        <rect x="34" y="308" width="292" height="32" rx="16" fill="#0b2d6b" />
-        <text
-          x="180"
-          y="329"
-          textAnchor="middle"
-          fill="#ffffff"
-          fontFamily="Plus Jakarta Sans, sans-serif"
-          fontWeight="600"
-          fontStyle="italic"
-          fontSize="15.5"
-          letterSpacing="0.3"
-        >
-          Clean Today. Healthy Tomorrow.
         </text>
       </svg>
     </motion.div>
