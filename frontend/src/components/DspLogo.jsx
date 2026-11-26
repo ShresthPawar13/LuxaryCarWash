@@ -5,7 +5,7 @@ export default function DspLogo({ variant = "full", className = "" }) {
     return (
       <div className={`inline-flex items-center gap-3 select-none ${className}`}>
         <motion.svg
-          viewBox="0 0 220 185"
+          viewBox="0 0 220 178"
           className="h-12 w-13 shrink-0"
           whileHover={{ scale: 1.05 }}
         >
@@ -110,14 +110,9 @@ export default function DspLogo({ variant = "full", className = "" }) {
           </text>
         </motion.svg>
 
-        <div className="leading-tight">
-          <span className="block text-sm font-extrabold tracking-tight text-[#0b2d6b] sm:text-base">
-            Doorstep Sanitization Providers
-          </span>
-          <span className="mt-0.5 block text-[11px] font-bold uppercase tracking-wider text-sky-700">
-            Car &amp; Bike Wash · Auto &amp; Home Care
-          </span>
-        </div>
+        <span className="text-sm font-extrabold tracking-tight text-[#0b2d6b] sm:text-base">
+          Doorstep Sanitization Providers
+        </span>
       </div>
     );
   }
@@ -131,10 +126,10 @@ export default function DspLogo({ variant = "full", className = "" }) {
       className={`inline-flex flex-col items-center select-none ${className}`}
     >
       <svg
-        viewBox="0 0 360 315"
+        viewBox="0 0 360 255"
         className="h-auto w-64 sm:w-72 drop-shadow-sm"
         role="img"
-        aria-label="Doorstep Sanitization Providers (DSP)"
+        aria-label="DSP"
       >
         <defs>
           <linearGradient id="dspGreenFull" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -249,31 +244,6 @@ export default function DspLogo({ variant = "full", className = "" }) {
           letterSpacing="5"
         >
           DSP
-        </text>
-
-        <text
-          x="180"
-          y="268"
-          textAnchor="middle"
-          fill="#0b2d6b"
-          fontFamily="Plus Jakarta Sans, sans-serif"
-          fontWeight="800"
-          fontSize="24"
-          letterSpacing="-0.3"
-        >
-          Doorstep Sanitization
-        </text>
-        <text
-          x="180"
-          y="296"
-          textAnchor="middle"
-          fill="#0b2d6b"
-          fontFamily="Plus Jakarta Sans, sans-serif"
-          fontWeight="800"
-          fontSize="24"
-          letterSpacing="-0.3"
-        >
-          Providers
         </text>
       </svg>
     </motion.div>

@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, Bike, Car, Home, Plus, Info, ShoppingBag } from "lucide-react";
 import {
-  BIKE_PACKAGES,
+  Check,
+  Bike,
+  Car,
+  Sun,
+  Layers,
+  Plus,
+  Info,
+  ShoppingBag,
+} from "lucide-react";
+import {
   CAR_PACKAGES,
-  HOME_PACKAGES,
+  BIKE_PACKAGES,
+  SOLAR_PACKAGES,
+  OTHERS_PACKAGES,
   ADDON_SERVICES,
 } from "../data/servicesData";
 
@@ -18,16 +28,19 @@ export default function PackagesSection({
   const [activeTab, setActiveTab] = useState("car");
 
   const tabs = [
-    { id: "car", label: "Car Packages", icon: Car },
-    { id: "bike", label: "Bike Packages", icon: Bike },
-    { id: "home", label: "Home Cleaning", icon: Home },
+    { id: "car", label: "Car Wash", icon: Car },
+    { id: "bike", label: "Bike Spa", icon: Bike },
+    { id: "solar", label: "Solar Cleaning", icon: Sun },
+    { id: "others", label: "Others", icon: Layers },
   ];
 
   const packages =
     activeTab === "bike"
       ? BIKE_PACKAGES
-      : activeTab === "home"
-      ? HOME_PACKAGES
+      : activeTab === "solar"
+      ? SOLAR_PACKAGES
+      : activeTab === "others"
+      ? OTHERS_PACKAGES
       : CAR_PACKAGES;
 
   const getPackageQty = (id) =>
@@ -49,13 +62,13 @@ export default function PackagesSection({
             Step 1 · Mix &amp; match across categories
           </span>
           <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Car, Bike &amp; Home Sanitization Packages
+            Car, Bike, Solar &amp; Other Sanitization Packages
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">
-            Add Car Wash, Bike Spa, and Home Cleaning packages together in one single cart — switch tabs freely without losing your selections.
+            Add Car Wash, Bike Spa, Solar Panel Cleaning, and Sofa/Home services together in one single cart — switch tabs freely without losing your selections.
           </p>
 
-          {/* Animated Sliding Pill Tabs with Category Selection Badges */}
+          {/* Animated Sliding Pill Tabs: Car -> Bike -> Solar Cleaning -> Others */}
           <div className="mt-8 inline-flex flex-wrap justify-center gap-1 rounded-full border border-slate-200 bg-white p-1.5 shadow-xs">
             {tabs.map((tab) => {
               const Icon = tab.icon;
@@ -98,7 +111,7 @@ export default function PackagesSection({
           </div>
         </motion.div>
 
-        {/* Animated Package Cards Grid */}
+        {/* 3 Package Cards Grid with Animated Photo Motion */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -124,7 +137,7 @@ export default function PackagesSection({
                     delay: idx * 0.08,
                   }}
                   whileHover={{ y: -8 }}
-                  className={`flex flex-col justify-between overflow-hidden rounded-[26px] border bg-white transition-shadow duration-300 hover:shadow-xl ${
+                  className={`group flex flex-col justify-between overflow-hidden rounded-[26px] border bg-white transition-shadow duration-300 hover:shadow-xl ${
                     isSelected
                       ? "border-emerald-600 ring-2 ring-emerald-500/25 shadow-lg"
                       : pkg.featured
@@ -135,12 +148,32 @@ export default function PackagesSection({
                   <div>
                     <div className="relative h-52 w-full overflow-hidden bg-slate-100">
                       <motion.img
-                        whileHover={{ scale: 1.07 }}
-                        transition={{ duration: 0.5 }}
+                        animate={{ scale: [1, 1.05, 1] }}
+                        transition={{
+                          duration: 6.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: idx * 0.5,
+                        }}
+                        whileHover={{ scale: 1.1 }}
                         src={pkg.image}
                         alt={pkg.name}
                         className="h-full w-full object-cover"
                       />
+
+                      {/* Animated Gloss Shimmer Sweep Across Photo */}
+                      <motion.div
+                        animate={{ x: ["-120%", "220%"] }}
+                        transition={{
+                          duration: 3.2,
+                          repeat: Infinity,
+                          repeatDelay: 2.2,
+                          ease: "easeInOut",
+                          delay: idx * 0.5,
+                        }}
+                        className="pointer-events-none absolute inset-y-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                      />
+
                       <span
                         className={`absolute top-4 left-4 rounded-full px-3.5 py-1 text-xs font-extrabold shadow-xs ${
                           pkg.featured
@@ -150,6 +183,7 @@ export default function PackagesSection({
                       >
                         {pkg.tag}
                       </span>
+
                       {isSelected && (
                         <motion.span
                           initial={{ scale: 0.7, opacity: 0 }}
@@ -234,10 +268,10 @@ export default function PackagesSection({
               Step 2 · Extra attention (Optional)
             </span>
             <h3 className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
-              Home &amp; Vehicle Add-on Services
+              Add-on Detailing, Sofa &amp; Solar Treatments
             </h3>
             <p className="mx-auto mt-2 max-w-xl text-sm text-slate-600">
-              Tap <strong>+ Add to Cart</strong> to combine sofa shampooing, bathroom descaling, kitchen degreasing, or car interior treatments.
+              Tap <strong>+ Add to Cart</strong> on car interior treatments, sofa shampooing, or quick solar panel rinses.
             </p>
           </motion.div>
 
@@ -315,7 +349,7 @@ export default function PackagesSection({
           >
             <p className="flex items-center gap-2 text-xs font-medium text-slate-600">
               <Info className="h-4 w-4 shrink-0 text-sky-600" />
-              You can combine multiple Car, Bike, and Home services in a single cart and adjust quantities inside checkout.
+              Combine multiple Car, Bike, Solar, and Others services in a single cart and adjust quantities inside checkout.
             </p>
             <motion.button
               whileHover={{ scale: 1.03 }}

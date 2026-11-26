@@ -6,7 +6,7 @@ import { SERVICE_AREAS } from "../data/servicesData";
 export default function AboutSection({ onOpenCart }) {
   const objectives = [
     "Specialize in doorstep snow-foam car washing, bike spa, and interior cabin sanitization.",
-    "Provide on-demand sofa shampooing and home deep sanitization with safe, eco-friendly solutions.",
+    "Provide rooftop solar panel cleaning plus sofa shampooing & residential sanitization under Others.",
     "Follow a documented 6-point pre-wash and post-wash quality inspection on every visit.",
     "Build lasting customer trust through transparent ₹ pricing, monthly plans, and 6th-wash-free rewards.",
   ];
@@ -24,7 +24,7 @@ export default function AboutSection({ onOpenCart }) {
           >
             <DspLogo variant="full" />
             <p className="mt-4 text-center text-xs font-bold uppercase tracking-wider text-slate-500">
-              Cars • Bikes • Sofas • Residential Sanitization
+              Cars • Bikes • Solar Panels • Sofas &amp; Others
             </p>
           </motion.div>
 
@@ -45,15 +45,15 @@ export default function AboutSection({ onOpenCart }) {
             <p className="mt-4 text-base leading-relaxed text-slate-600">
               <strong>Doorstep Sanitization Providers (DSP)</strong> is a dedicated
               doorstep car and bike washing, detailing, and sanitization company
-              built to make vehicle maintenance effortless. Instead of waiting at
-              crowded wash centers, you get a structured, spa-grade foam wash and
-              interior sanitization right at your parking spot.
+              built to make vehicle maintenance effortless. From family cars and
+              SUVs to sports cars, scooties, and superbikes, you get a spa-grade
+              foam wash right at your parking spot.
             </p>
 
             <p className="mt-3 text-base leading-relaxed text-slate-600">
-              Alongside our core two-wheeler and four-wheeler care packages, DSP
-              also provides sofa shampooing, mattress steam cleaning, and home
-              surface sanitization—all bookable in a single combined cart.
+              Alongside our core vehicle packages, DSP also offers spot-free
+              Solar Panel Cleaning and Sofa &amp; Home Sanitization services—all
+              bookable together in one combined cart.
             </p>
 
             <ul className="mt-6 space-y-2.5">
@@ -78,9 +78,9 @@ export default function AboutSection({ onOpenCart }) {
             </div>
             <h3 className="mt-5 text-xl font-extrabold text-slate-900">Our Vision</h3>
             <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-              To become India’s most trusted doorstep car &amp; bike washing and
-              sanitization brand—recognized for consistent quality, water-smart
-              practices, transparent pricing, and unmatched convenience.
+              To become India’s most trusted doorstep car &amp; bike washing, solar
+              care, and sanitization brand—recognized for consistent quality,
+              water-smart practices, and transparent pricing.
             </p>
           </div>
 
@@ -90,10 +90,9 @@ export default function AboutSection({ onOpenCart }) {
             </div>
             <h3 className="mt-5 text-xl font-extrabold text-slate-900">Our Mission</h3>
             <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-              To deliver professional vehicle cleaning, sanitization, and sofa/home
-              hygiene care using modern equipment, safe pH-neutral products, and
-              skilled technicians—ensuring a cleaner, healthier experience without
-              leaving home.
+              To deliver professional vehicle cleaning, solar panel efficiency care,
+              and upholstery hygiene using modern equipment, safe pH-neutral
+              products, and skilled technicians right at your doorstep.
             </p>
           </div>
         </div>
