@@ -13,7 +13,7 @@ connectDB();
 const app = express();
 
 // Global Middleware
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 // Health Check Endpoint
