@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import serviceRoutes from "./routes/serviceRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import enquiryRoutes from "./routes/enquiryRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -28,6 +29,7 @@ app.get("/api/health", (req, res) => {
 app.use("/api/services", serviceRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/enquiries", enquiryRoutes);
+app.use("/api/auth", authRoutes);
 
 // 404 Catch-All for Invalid Routes
 app.use((req, res) => {

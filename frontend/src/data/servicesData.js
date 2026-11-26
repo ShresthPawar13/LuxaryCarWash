@@ -1,6 +1,6 @@
-export const HERO_MEDIA = {
-  main: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1400&q=80",
-  bike: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80",
+﻿export const HERO_MEDIA = {
+  main: "/images/car-wash-1.jpg",
+  bike: "/images/bike-washing-1.jpg",
 };
 
 export const CAR_PACKAGES = [
@@ -148,8 +148,7 @@ export const HOME_PACKAGES = [
     numericPrice: 799,
     billing: "/ Up to 5-Seater Sofa",
     duration: "60–90 mins",
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+    image: "/images/SofaCleaning.jpg",
     features: [
       "HEPA dry vacuuming for dust & pet hair",
       "Fabric-safe foam shampooing & stain lifting",
@@ -190,8 +189,7 @@ export const HOME_PACKAGES = [
     numericPrice: 499,
     billing: "/ Full Flat Session",
     duration: "45 mins",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80",
+    image: "/images/BathroomCleaning.jpg",
     features: [
       "Hospital-grade non-toxic ULV mist sanitization",
       "Door handles, switches, tables & railings wipe",
@@ -208,8 +206,7 @@ export const ADDON_SERVICES = [
     desc: "Deep-focused shampooing & sanitization to lift embedded dirt and stains from fabric or leather car seats.",
     price: "₹399",
     numericPrice: 399,
-    image:
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=700&q=80",
+    image: "/images/seatcleaning.jpg",
   },
   {
     id: "ac-vent",
@@ -217,8 +214,7 @@ export const ADDON_SERVICES = [
     desc: "Removes dust and odor-causing microbes from AC vent ducts for cleaner, healthier cabin air.",
     price: "₹299",
     numericPrice: 299,
-    image:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80",
+    image: "/images/CarVentACCleaning.jpg",
   },
   {
     id: "dashboard-polish",
@@ -226,8 +222,7 @@ export const ADDON_SERVICES = [
     desc: "Sanitizes and cleans interior car dashboard & door trims with a neat, non-greasy factory matte finish.",
     price: "₹199",
     numericPrice: 199,
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80",
+    image: "/images/DashboardPolish.jpg",
   },
   {
     id: "headlight-restoration",
@@ -235,8 +230,7 @@ export const ADDON_SERVICES = [
     desc: "Improves night visibility and appearance by treating dull, hazy, oxidized outer lens surfaces.",
     price: "₹899",
     numericPrice: 899,
-    image:
-      "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=700&q=80",
+    image: "/images/HeadlightRestoration.jpg",
   },
   {
     id: "sofa-shampoo",
@@ -244,8 +238,7 @@ export const ADDON_SERVICES = [
     desc: "Deep foam shampooing and steam sanitization to lift stains and allergens from living room sofas.",
     price: "₹499",
     numericPrice: 499,
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80",
+    image: "/images/SofaCleaning.jpg",
   },
   {
     id: "home-room-sanitize",
@@ -253,8 +246,7 @@ export const ADDON_SERVICES = [
     desc: "Targeted descaling, degreasing, and anti-bacterial sanitization for home bathrooms or kitchen slabs.",
     price: "₹399",
     numericPrice: 399,
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80",
+    image: "/images/BathroomCleaning.jpg",
   },
 ];
 

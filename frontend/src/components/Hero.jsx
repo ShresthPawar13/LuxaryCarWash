@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import {
   Check,
   ArrowDown,
@@ -9,7 +9,6 @@ import {
   Bike,
   Car,
 } from "lucide-react";
-import { HERO_MEDIA } from "../data/servicesData";
 import { buildWhatsAppBookingUrl } from "../utils/whatsapp";
 
 const containerVariants = {
@@ -142,7 +141,7 @@ export default function Hero() {
             className="overflow-hidden rounded-[28px] border border-slate-200/90 bg-white p-2 shadow-xl"
           >
             <img
-              src={HERO_MEDIA.main}
+              src="/images/car-wash-1.jpg"
               alt="Doorstep Car Snow Foam Wash"
               className="h-[320px] w-full rounded-[22px] object-cover sm:h-[400px]"
             />
@@ -157,7 +156,7 @@ export default function Hero() {
             className="absolute -right-2 -bottom-7 hidden w-56 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-xl sm:block"
           >
             <img
-              src={HERO_MEDIA.bike}
+              src="/images/bike-washing-1.jpg"
               alt="Doorstep Bike Spa & Chain Care"
               className="h-28 w-full object-cover"
             />
