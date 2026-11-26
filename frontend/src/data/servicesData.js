@@ -5,140 +5,207 @@
 
 export const CAR_PACKAGES = [
   {
-    id: "car-express",
+    id: "car-family-express",
     category: "Car",
-    tag: "Quick exterior maintenance",
-    name: "Express Car Wash",
+    tag: "Family Car & Hatchback",
+    name: "Express Family Car Wash",
     description:
-      "A convenient doorstep exterior refresh to remove everyday dust and road dirt right at your parking spot.",
+      "Fast doorstep exterior snow-foam wash for daily hatchbacks & family sedans to remove dust and road grime right in your parking spot.",
     price: "₹399",
     numericPrice: 399,
     billing: "/ One-time service",
     duration: "30–40 mins",
     image:
-      "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80",
     features: [
       "High-pressure water rinse",
       "pH-neutral snow foam & hand scrubbing",
-      "Tyre & wheel arch cleaning",
+      "Tyre & alloy wheel arch cleaning",
       "Exterior glass & mirror wipe",
       "Microfiber drying & tyre polish",
     ],
   },
   {
-    id: "car-standard",
+    id: "car-suv-standard",
     category: "Car",
-    tag: "Most popular",
+    tag: "SUV & Sedan · Most Popular",
     featured: true,
-    name: "Standard Car Care & Sanitization",
+    name: "Standard Car & SUV Sanitization",
     description:
-      "Complete inside-and-out care combining exterior snow foam wash with interior vacuuming, cabin sanitization, and polish.",
+      "Complete inside-and-out care for family SUVs & sedans combining exterior snow foam wash with interior vacuuming and cabin sanitization.",
     price: "₹599",
     numericPrice: 599,
     billing: "/ One-time service",
     duration: "45–55 mins",
     image:
-      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80",
     features: [
-      "External snow foam wash",
-      "Interior vacuum & cabin sanitization",
+      "External thick snow foam wash",
+      "Interior deep vacuum & cabin sanitization",
       "Floor mat & boot cleaning",
       "Dashboard & ORVM mirror polish",
-      "Tyre scrubbing, polish & fresh fragrance",
+      "Tyre scrubbing, dressing & fresh fragrance",
     ],
   },
   {
-    id: "car-subscription",
+    id: "car-sports-detail",
     category: "Car",
-    tag: "Monthly Society Plan",
-    name: "Car Monthly Wash Subscription",
+    tag: "Sports & Luxury Detailing",
+    name: "Sports & Luxury Car Ceramic Spa",
     description:
-      "8 Express Doorstep Washes per month at your apartment society or office parking — zero travel, always spotless.",
-    price: "₹1,999",
-    numericPrice: 1999,
-    billing: "/ month",
-    duration: "8 washes / month",
+      "Showroom-grade detailing for sports cars and luxury vehicles with scratch-free two-bucket foam wash, wax sealant, and leather care.",
+    price: "₹1,299",
+    numericPrice: 1299,
+    billing: "/ Detailing session",
+    duration: "75–90 mins",
     image:
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=900&q=80",
     features: [
-      "8 Doorstep Express Foam Washes",
-      "2 Interior vacuum & sanitization sessions",
-      "Dedicated weekly time slots",
-      "6th wash loyalty bonus included",
+      "Scratch-free pH-neutral snow foam & two-bucket wash",
+      "Carnauba / hydrophobic spray sealant gloss",
+      "Leather seat conditioning & cockpit sanitization",
+      "Alloy barrel & brake-dust decontamination",
+      "Streak-free glass & exhaust tip polish",
     ],
   },
 ];
 
 export const BIKE_PACKAGES = [
   {
-    id: "bike-express",
+    id: "bike-scooty-express",
     category: "Bike",
-    tag: "Quick exterior maintenance",
-    name: "Express Bike Wash",
+    tag: "Scooty",
+    name: "Express Scooty Wash",
     description:
-      "A convenient doorstep exterior refresh to remove everyday dust and road grime from your two-wheeler.",
+      "Quick doorstep snow-foam wash for daily scooties to remove dust, mud, and road grime right in your parking spot.",
     price: "₹149",
     numericPrice: 149,
     billing: "/ One-time service",
     duration: "25–30 mins",
-    image:
-      "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80",
+    image: "/images/scooty.avif",
     features: [
       "High-pressure water rinse",
-      "pH-neutral snow foam & hand wash",
-      "Tyre, alloy & mudguard cleaning",
-      "Visor & mirror streak-free wipe",
+      "pH-neutral snow foam & soft mitt wash",
+      "Footboard, mudguard & alloy cleaning",
+      "Visor, console & mirror streak-free wipe",
       "Microfiber drying & tyre polish",
     ],
   },
   {
-    id: "bike-standard",
+    id: "bike-normal-standard",
     category: "Bike",
-    tag: "Most popular",
+    tag: "Bike · Most Popular",
     featured: true,
-    name: "Standard Bike Spa & Sanitization",
+    name: "Standard Bike Spa & Chain Care",
     description:
-      "Complete two-wheeler care combining thick snow foam wash, engine degreasing, chain lubrication, and handlebar sanitization.",
+      "Complete doorstep care for daily commuter & street bikes combining snow foam wash, engine degreasing, chain lube, and handlebar sanitization.",
     price: "₹299",
     numericPrice: 299,
     billing: "/ One-time service",
     duration: "40–45 mins",
     image:
-      "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1622185135505-2d795003994a?auto=format&fit=crop&w=900&q=80",
     features: [
       "Thick snow foam bath & hand wash",
       "Chain cleaning & anti-fling lubrication",
-      "Engine fins & exhaust degreasing",
-      "Handlebar, seat & switch sanitization",
+      "Engine fins & exhaust surface degreasing",
+      "Handlebar, tank, seat & switch sanitization",
       "Matte/gloss body & tyre dressing",
     ],
   },
   {
-    id: "bike-subscription",
+    id: "bike-sports-detail",
     category: "Bike",
-    tag: "Monthly Care Plan",
-    name: "Bike Monthly Doorstep Plan",
+    tag: "Sports Bike",
+    name: "Sports Bike Detailing & Wax Coat",
     description:
-      "4 Express Bike Washes + 1 Standard Bike Spa every month right at your home or society parking.",
-    price: "₹699",
-    numericPrice: 699,
-    billing: "/ month (5 services)",
-    duration: "Weekly scheduled slots",
+      "Precision detailing for faired sports bikes with fairing-safe foam wash, chain degrease/lube, and hydrophobic gloss protection.",
+    price: "₹499",
+    numericPrice: 499,
+    billing: "/ Detailing session",
+    duration: "55–65 mins",
     image:
-      "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80",
     features: [
-      "4 Doorstep Express Foam Washes",
-      "1 Full Standard Bike Spa & Chain Lube",
-      "Priority morning/evening slots",
-      "Free anti-bacterial helmet & seat sanitization",
+      "Fairing-safe pH-neutral snow foam & microfiber wash",
+      "Full O-ring chain degreasing & ceramic chain lube",
+      "Radiator grill, swingarm & alloy detailing",
+      "Hydrophobic spray wax & matte/gloss protection",
+      "Helmet visor & cockpit sanitization included",
     ],
   },
 ];
 
-export const HOME_PACKAGES = [
+export const SOLAR_PACKAGES = [
   {
-    id: "home-sofa-spa",
-    category: "Home",
+    id: "solar-residential",
+    category: "Solar",
+    tag: "Home Rooftop Solar",
+    name: "Residential Solar Panel Wash",
+    description:
+      "De-ionized water & soft non-abrasive brush cleaning for home rooftop solar panels to boost power generation efficiency.",
+    price: "₹499",
+    numericPrice: 499,
+    billing: "/ Up to 5 kW System",
+    duration: "40–50 mins",
+    image:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80",
+    features: [
+      "Mineral-free purified water rinse (zero water spots)",
+      "Soft anti-scratch microfiber solar brush scrub",
+      "Bird-dropping, pollen & dust film removal",
+      "Frame & mounting rail visual dirt check",
+      "Increases sunlight absorption up to 20–25%",
+    ],
+  },
+  {
+    id: "solar-society-commercial",
+    category: "Solar",
+    tag: "Housing Society · Most Popular",
+    featured: true,
+    name: "Society & Villa Solar Maintenance",
+    description:
+      "Complete multi-panel rooftop cleaning for bungalows, housing societies, and commercial rooftops with streak-free squeegee finish.",
+    price: "₹999",
+    numericPrice: 999,
+    billing: "/ 6 kW – 15 kW System",
+    duration: "60–90 mins",
+    image:
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80",
+    features: [
+      "Full rooftop array purified-water wash",
+      "Non-abrasive telescopic soft-bristle cleaning",
+      "Stubborn grime & hard-dust edge removal",
+      "Streak-free silicone wiper drying",
+      "Before & after panel cleanliness photo report",
+    ],
+  },
+  {
+    id: "solar-amc-plan",
+    category: "Solar",
+    tag: "Quarterly Efficiency Plan",
+    name: "Solar Quarterly Cleaning Subscription",
+    description:
+      "4 scheduled doorstep solar panel cleanings per year so your rooftop solar plant runs at peak output through summer and winter.",
+    price: "₹1,699",
+    numericPrice: 1699,
+    billing: "/ year (4 cleanings)",
+    duration: "Quarterly scheduled visits",
+    image:
+      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=900&q=80",
+    features: [
+      "4 Complete Doorstep Solar Panel Washes",
+      "Purified spot-free water & soft brush care",
+      "Automatic quarterly reminder & priority slot",
+      "Ideal for independent houses & societies",
+    ],
+  },
+];
+
+export const OTHERS_PACKAGES = [
+  {
+    id: "others-sofa-spa",
+    category: "Others",
     tag: "Sofa & Upholstery Care",
     featured: true,
     name: "Sofa, Mattress & Carpet Deep Cleaning",
@@ -158,8 +225,8 @@ export const HOME_PACKAGES = [
     ],
   },
   {
-    id: "home-deep-clean",
-    category: "Home",
+    id: "others-home-deep-clean",
+    category: "Others",
     tag: "Full Home Hygiene",
     name: "Home Deep Cleaning & Sanitization",
     description:
@@ -179,9 +246,9 @@ export const HOME_PACKAGES = [
     ],
   },
   {
-    id: "home-sanitization",
-    category: "Home",
-    tag: "Quick Disinfection",
+    id: "others-sanitization",
+    category: "Others",
+    tag: "Surface Disinfection",
     name: "Room & High-Touch Surface Sanitization",
     description:
       "Non-toxic, kid- and pet-safe ULV fogging and surface disinfection for bedrooms, living rooms, and home offices.",
@@ -234,27 +301,28 @@ export const ADDON_SERVICES = [
   },
   {
     id: "sofa-shampoo",
-    title: "Home Sofa Shampoo & Steam (3-Seater)",
+    title: "Sofa Shampoo & Steam (3-Seater)",
     desc: "Deep foam shampooing and steam sanitization to lift stains and allergens from living room sofas.",
     price: "₹499",
     numericPrice: 499,
     image: "/images/SofaCleaning.jpg",
   },
   {
-    id: "home-room-sanitize",
-    title: "Bathroom / Kitchen Deep Sanitization",
-    desc: "Targeted descaling, degreasing, and anti-bacterial sanitization for home bathrooms or kitchen slabs.",
+    id: "solar-addon-wash",
+    title: "Rooftop Solar Panel Quick Rinse",
+    desc: "Spot-free purified water rinse for residential solar panels alongside your vehicle wash visit.",
     price: "₹399",
     numericPrice: 399,
-    image: "/images/BathroomCleaning.jpg",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80",
   },
 ];
 
 export const WORKFLOW_STEPS = [
   {
     step: "01",
-    title: "Pick Car, Bike or Sofa/Home Service",
-    desc: "Select your car wash, bike spa, or add-on sofa & home sanitization in your Service Cart.",
+    title: "Pick Car, Bike, Solar or Others",
+    desc: "Select your vehicle wash, solar panel cleaning, or sofa & home care package in one combined Service Cart.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80",
   },
@@ -268,7 +336,7 @@ export const WORKFLOW_STEPS = [
   {
     step: "03",
     title: "Relax — DSP comes to you",
-    desc: "Our uniformed DSP specialists arrive at your parking spot or home and deliver a sanitized showroom shine.",
+    desc: "Our uniformed DSP specialists arrive at your parking spot or home and deliver a sanitized showroom finish.",
     image:
       "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=700&q=80",
   },
@@ -290,18 +358,18 @@ export const SERVICE_AREAS = [
 export const FAQS = [
   {
     q: "What doorstep services does DSP specialize in?",
-    a: "Doorstep Sanitization Providers (DSP) specializes primarily in doorstep Car Washing & Detailing and Bike Spa & Chain Care, while also offering Sofa Shampooing and Home Cleaning & Sanitization upon request.",
+    a: "Doorstep Sanitization Providers (DSP) specializes primarily in doorstep Car Washing and Bike Spa, followed by Solar Panel Cleaning and Others (Sofa Shampooing & Home Sanitization).",
   },
   {
     q: "Do you bring your own water, foam, and equipment?",
-    a: "Yes! Our mobile team arrives with pressure washers, pH-neutral snow foam, vacuum extractors, and sanitization gear. For vehicle washes, we only need a standard power point within 100 ft (we carry a 100-ft extension cable).",
+    a: "Yes! Our mobile team arrives with pressure washers, pH-neutral snow foam, purified solar-cleaning brushes, and sanitization gear. For vehicle washes, we only need a standard power point within 100 ft (we carry a 100-ft extension cable).",
   },
   {
-    q: "Can I book Car, Bike, and Sofa/Home services together?",
-    a: "Yes! You can add Car packages, Bike packages, and Sofa or Home Cleaning add-ons into the same Service Cart, select your preferred slot and Google Maps location, and send the complete order on WhatsApp in one click.",
+    q: "Can I book Car, Bike, Solar, and Sofa/Home services together?",
+    a: "Yes! You can add packages across Car, Bike, Solar Cleaning, and Others into the same Service Cart, select your preferred slot and Google Maps location, and send the complete order on WhatsApp in one click.",
   },
   {
-    q: "Are your chemicals safe for vehicle paint and home fabrics?",
-    a: "100%. We use pH-neutral shampoos safe for factory clear coats and ceramic coatings, as well as non-toxic, child- and pet-safe upholstery shampoos and sanitizers.",
+    q: "How does your Solar Panel Cleaning protect panel glass?",
+    a: "We use mineral-free purified water and non-abrasive soft-bristle solar brushes with zero harsh chemicals so your solar glass stays scratch-free and generates maximum power.",
   },
 ];
