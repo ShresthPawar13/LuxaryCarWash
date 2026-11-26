@@ -59,7 +59,7 @@ export default function AuthModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4">
-      <div className="relative w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-2xl">
+      <div className="relative w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-xl">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 cursor-pointer rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700"
@@ -70,9 +70,9 @@ export default function AuthModal({ isOpen, onClose }) {
         <div className="mb-5">
           <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-[#0b2d6b]">
             <Sparkles className="h-3.5 w-3.5 text-sky-600" />
-            DSP Loyalty Club · 6th Wash Free
+            DSP Loyalty Club â€” 6th Wash Free
           </div>
-          <h2 className="text-2xl font-extrabold text-[#0b2d6b]">
+          <h2 className="text-xl font-extrabold text-[#0b2d6b]">
             {isLogin ? "Welcome Back" : "Create Your Account"}
           </h2>
           <p className="mt-1 text-sm text-slate-500">
@@ -85,7 +85,10 @@ export default function AuthModal({ isOpen, onClose }) {
         <div className="mb-5 grid grid-cols-2 gap-1 rounded-xl bg-slate-100 p-1">
           <button
             type="button"
-            onClick={() => { setIsLogin(true); setError(""); }}
+            onClick={() => {
+              setIsLogin(true);
+              setError("");
+            }}
             className={`cursor-pointer rounded-lg py-2 text-sm font-bold transition ${
               isLogin
                 ? "bg-[#0b2d6b] text-white shadow-xs"
@@ -96,7 +99,10 @@ export default function AuthModal({ isOpen, onClose }) {
           </button>
           <button
             type="button"
-            onClick={() => { setIsLogin(false); setError(""); }}
+            onClick={() => {
+              setIsLogin(false);
+              setError("");
+            }}
             className={`cursor-pointer rounded-lg py-2 text-sm font-bold transition ${
               !isLogin
                 ? "bg-[#0b2d6b] text-white shadow-xs"
@@ -129,7 +135,7 @@ export default function AuthModal({ isOpen, onClose }) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your full name"
-                    className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-3 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
+                    className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-4 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -147,7 +153,7 @@ export default function AuthModal({ isOpen, onClose }) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-3 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
+                    className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-4 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -167,7 +173,7 @@ export default function AuthModal({ isOpen, onClose }) {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@example.com"
-                className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-3 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-4 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
               />
             </div>
           </div>
@@ -186,7 +192,7 @@ export default function AuthModal({ isOpen, onClose }) {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Min. 6 characters"
-                className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-3 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50 py-2 pr-4 pl-10 text-sm text-slate-900 placeholder-slate-400 focus:border-[#0b2d6b] focus:bg-white focus:outline-none"
               />
             </div>
           </div>

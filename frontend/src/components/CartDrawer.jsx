@@ -252,7 +252,7 @@ export default function CartDrawer({
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g. Creta + Activa + 2 BHK"
+                      placeholder="e.g. Creta + Activa + 5kW Solar / Sofa"
                       value={itemDetails}
                       onChange={(e) => setItemDetails(e.target.value)}
                       className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:border-[#0b2d6b] focus:outline-none"

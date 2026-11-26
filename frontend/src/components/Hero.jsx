@@ -55,7 +55,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-3.5 py-1.5 text-xs font-bold text-[#0b2d6b] shadow-2xs"
           >
             <Sparkles className="h-3.5 w-3.5 text-lime-600" />
-            Doorstep Car &amp; Bike Wash · Plus Sofa &amp; Home Sanitization
+            Doorstep Car &amp; Bike Wash · Solar &amp; Sofa Sanitization
           </motion.div>
 
           <motion.h1
@@ -81,8 +81,8 @@ export default function Hero() {
           >
             <strong>Doorstep Sanitization Providers (DSP)</strong> brings professional
             snow-foam car &amp; bike washing, interior cabin detailing, and
-            anti-bacterial sanitization right to your parking spot — plus on-demand
-            sofa &amp; home cleaning whenever you need it.
+            anti-bacterial sanitization right to your parking spot — plus rooftop
+            solar panel &amp; sofa cleaning services.
           </motion.p>
 
           <motion.div
@@ -116,13 +116,13 @@ export default function Hero() {
             className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700"
           >
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Car Foam &amp; Detailing
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Family &amp; Sports Cars
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Bike Spa &amp; Chain Care
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Scooty &amp; Sports Bikes
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Sofa &amp; Home Add-ons
+              <Check className="h-4 w-4 stroke-[2.5] text-lime-600" /> Solar &amp; Sofa Care
             </span>
           </motion.div>
         </motion.div>
@@ -134,7 +134,6 @@ export default function Hero() {
           transition={{ duration: 0.65, ease: "easeOut" }}
           className="relative lg:col-span-6"
         >
-          {/* Main Car Wash Photo */}
           <motion.div
             whileHover={{ scale: 1.015 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
@@ -147,7 +146,6 @@ export default function Hero() {
             />
           </motion.div>
 
-          {/* Overlapping Bike Spa Photo Card */}
           <motion.div
             initial={{ opacity: 0, x: 24, y: 20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -163,12 +161,11 @@ export default function Hero() {
             <div className="flex items-center gap-2 bg-white px-3 py-2">
               <Bike className="h-4 w-4 shrink-0 text-[#0b2d6b]" />
               <span className="text-[11px] font-extrabold text-slate-900">
-                Two-Wheeler Foam Spa
+                Scooty &amp; Sports Bike Spa
               </span>
             </div>
           </motion.div>
 
-          {/* Floating Bottom-Left Trust Badge */}
           <motion.div
             animate={{ y: [0, -7, 0] }}
             transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
@@ -182,12 +179,11 @@ export default function Hero() {
                 pH-Neutral Foam &amp; Sanitization
               </p>
               <p className="text-[11px] font-medium text-slate-500">
-                Safe for cars, bikes &amp; upholstery
+                Safe for cars, bikes &amp; solar panels
               </p>
             </div>
           </motion.div>
 
-          {/* Floating Top-Right Rating Pill */}
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
